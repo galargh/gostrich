@@ -1,1 +1,2 @@
+#Travis CI config
 language: go
