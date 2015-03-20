@@ -1,3 +1,3 @@
-# gost [![Build Status](https://travis-ci.org/gfjalar/gost.svg?branch=master)](https://travis-ci.org/gfjalar/gost) [![GoDoc](http://godoc.org/github.com/gfjalar/gost?status.png)](http://godoc.org/github.com/piotrgalar/gost)
+# gost [![Build Status](https://drone.io/github.com/gfjalar/gost/status.png)](https://drone.io/github.com/gfjalar/gost/latest) [![Coverage Status](https://coveralls.io/repos/gfjalar/gost/badge.svg?branch=master)](https://coveralls.io/r/gfjalar/gost?branch=master) [![GoDoc](http://godoc.org/github.com/gfjalar/gost?status.png)](http://godoc.org/github.com/piotrgalar/gost)
 
 Function chaining helper for Go

@@ -1,3 +1,8 @@
+// Copyright 2015 Piotr Galar. All rights reserved.
+// Based on the path package, Copyright 2009 The Go Authors.
+// Use of this source code is governed by a BSD-style license that can be found
+// in the LICENSE file.
+
 package gost
 
 import (
@@ -182,4 +187,16 @@ func TestThenAcceptsNil(t *testing.T) {
 		then.links[0] != nil) {
 		t.Fail()
 	}
+}
+
+func TestIncompleteBuildShouldPanic(t *testing.T) {
+	defer func() {
+		if r := recover(); r == nil {
+			t.Fail()
+		} else if s, ok := r.(string); !ok || s != "Gost: Build with incomplete chain" {
+			t.Fail()
+		}
+	}()
+	f := func(a int){}
+	New().Compose(f).Build()
 }
