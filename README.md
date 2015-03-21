@@ -5,7 +5,7 @@ Gost provides a simple function chaining mechanism. Its main purpose is to make 
 ### How does it work?
 Gost uses named struct Chain which holds an array of interface objects ie. links.
 
-New function creates a new Chain object where links array is initialised to nil. It returns chain's address.
+New function creates a new Chain object where links array is initialised to nil. It returns the chain's address.
 
 Pointer method Compose takes variadic number of interface objects and appends them to the links array of 
 the chain on which it was called.
