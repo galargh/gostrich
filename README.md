@@ -1,6 +1,6 @@
 # gost [![Build Status](https://drone.io/github.com/gfjalar/gost/status.png)](https://drone.io/github.com/gfjalar/gost/latest) [![Coverage Status](https://coveralls.io/repos/gfjalar/gost/badge.svg?branch=master)](https://coveralls.io/r/gfjalar/gost?branch=master) [![GoDoc](https://godoc.org/github.com/gfjalar/gost?status.png)](http://godoc.org/github.com/piotrgalar/gost)
 
-Gost provides a simple function chaining mechanism. It's main purpose is to make function composition in Go more readable.
+Gost provides a simple function chaining mechanism. Its main purpose is to make function composition in Go more readable.
 
 ### How does it work?
 Gost uses named struct Chain which holds an array of interface objects ie. links.
