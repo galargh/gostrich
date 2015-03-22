@@ -77,3 +77,49 @@ To execute the chain:
 ```go
 result := chain.Build()
 ```
+
+### Example
+
+```go
+package main 
+
+import (
+	"net/http"
+	"log"
+	
+	"github.com/gfjalar/gost"
+)
+
+func CombineHandlers(handlers ...http.Handler) http.Handler {
+	return http.HandlerFunc(func(response http.ResponseWriter, request *http.Request) {
+		for _, handler := range handlers {
+			handler.ServeHTTP(response, request)
+		}
+	})
+}
+
+func CreateLogHandler(msg string) http.Handler {
+	return http.HandlerFunc(func(response http.ResponseWriter, request *http.Request) {
+		log.Print(msg)
+	})
+}
+
+func CreateMiddleware(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(response http.ResponseWriter, request *http.Request) {
+		log.Print("BEFORE")
+		next.ServeHTTP(response, request)
+		log.Print("AFTER")
+	})
+}
+
+func main() {
+	chain := gost.New().
+		Compose(CreateLogHandler, "first handler").
+		Compose(CreateMiddleware).
+			Compose(CreateMiddleware).
+				Compose(CreateLogHandler, "second handler").
+		Compose(CreateLogHandler, "third handler")
+	handler := chain.Then(CombineHandlers).Build()
+	http.ListenAndServe(":8080", handler[0].(http.Handler))
+}
+```
