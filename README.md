@@ -1,9 +1,9 @@
-# gost [![Build Status](https://drone.io/github.com/gfjalar/gost/status.png)](https://drone.io/github.com/gfjalar/gost/latest) [![Coverage Status](https://coveralls.io/repos/gfjalar/gost/badge.svg?branch=master)](https://coveralls.io/r/gfjalar/gost?branch=master) [![GoDoc](https://godoc.org/github.com/gfjalar/gost?status.png)](http://godoc.org/github.com/piotrgalar/gost)
+# gostrich [![Build Status](https://drone.io/github.com/gfjalar/gostrich/status.png)](https://drone.io/github.com/gfjalar/gostrich/latest) [![Coverage Status](https://coveralls.io/repos/gfjalar/gostrich/badge.svg?branch=master)](https://coveralls.io/r/gfjalar/gostrich?branch=master) [![GoDoc](https://godoc.org/github.com/gfjalar/gostrich?status.png)](http://godoc.org/github.com/piotrgalar/gostrich)
 
-Gost provides a simple function chaining mechanism. Its main purpose is to make function composition in Go more readable.
+Gostrich provides a simple function chaining mechanism. Its main purpose is to make function composition in Go more readable.
 
 ### How does it work?
-Gost uses named struct Chain which holds an array of interface objects ie. links.
+Gostrich uses named struct Chain which holds an array of interface objects ie. links.
 
 New function creates a new Chain object where links array is initialised to nil. It returns the chain's address.
 
@@ -47,12 +47,12 @@ aren't of the correct type, the Build will panic.
 
 To import:
 ```go
-import "github.com/gfjalar/gost"
+import "github.com/gfjalar/gostrich"
 ```
 
 To start a new chain:
 ```go
-chain := gost.New()
+chain := gostrich.New()
 ```
 
 To create an expression of form f(g):
@@ -87,7 +87,7 @@ import (
 	"net/http"
 	"log"
 	
-	"github.com/gfjalar/gost"
+	"github.com/gfjalar/gostrich"
 )
 
 func CombineHandlers(handlers ...http.Handler) http.Handler {
@@ -113,7 +113,7 @@ func CreateMiddleware(next http.Handler) http.Handler {
 }
 
 func main() {
-	chain := gost.New().
+	chain := gostrich.New().
 		Compose(CreateLogHandler, "first handler").
 		Compose(CreateMiddleware).
 			Compose(CreateMiddleware).
