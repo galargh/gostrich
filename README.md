@@ -1,4 +1,4 @@
-# gostrich [![Build Status](https://drone.io/github.com/gfjalar/gostrich/status.png)](https://drone.io/github.com/gfjalar/gostrich/latest) [![Coverage Status](https://coveralls.io/repos/gfjalar/gostrich/badge.svg?branch=master)](https://coveralls.io/r/gfjalar/gostrich?branch=master) [![GoDoc](https://godoc.org/github.com/gfjalar/gostrich?status.png)](http://godoc.org/github.com/piotrgalar/gostrich)
+# gostrich [![Build Status](https://drone.io/github.com/gfjalar/gostrich/status.png)](https://drone.io/github.com/gfjalar/gostrich/latest) [![Coverage Status](https://coveralls.io/repos/gfjalar/gostrich/badge.svg?branch=master)](https://coveralls.io/r/gfjalar/gostrich?branch=master) [![GoDoc](https://godoc.org/github.com/gfjalar/gostrich?status.png)](http://godoc.org/github.com/gfjalar/gostrich)
 
 Gostrich provides a simple function chaining mechanism. Its main purpose is to make function composition in Go more readable.
 
