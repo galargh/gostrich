@@ -1,8 +1,3 @@
-// Copyright 2015 Piotr Galar. All rights reserved.
-// Based on the path package, Copyright 2009 The Go Authors.
-// Use of this source code is governed by a BSD-style license that can be found
-// in the LICENSE file.
-
 // Package gostrich provides a simple function chaining mechanism.
 // It allows chaining functions and the arguments they require.
 // It does not ensure the correctness of a chain until the build is requested.
