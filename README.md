@@ -3,6 +3,8 @@
 [![Coverage Status](https://coveralls.io/repos/gfjalar/gostrich/badge.svg?branch=master)](https://coveralls.io/r/gfjalar/gostrich?branch=master)
 [![GoDoc](https://godoc.org/github.com/gfjalar/gostrich?status.svg)](http://godoc.org/github.com/gfjalar/gostrich)
 
+#### *This is a learning project.
+
 Gostrich provides a simple function chaining mechanism. Its main purpose is to
 make function composition in Go more readable.
 
