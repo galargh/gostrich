@@ -1,7 +1,7 @@
 # gostrich
 [![Build Status](https://drone.io/github.com/gfjalar/gostrich/status.png?branch=master)](https://drone.io/github.com/gfjalar/gostrich/latest)
 [![Coverage Status](https://coveralls.io/repos/gfjalar/gostrich/badge.svg?branch=master)](https://coveralls.io/r/gfjalar/gostrich?branch=master)
-[![GoDoc](https://godoc.org/github.com/gfjalar/gostrich?status.svg)](http://godoc.org/github.com/gfjalar/gostrich)
+[![GoDoc](https://godoc.org/github.com/gfjalar/gostrich?status.svg)](https://godoc.org/github.com/gfjalar/gostrich)
 
 #### *This is a learning project.
 
